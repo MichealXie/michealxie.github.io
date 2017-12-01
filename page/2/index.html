@@ -8,26 +8,13 @@
   <link rel="dns-prefetch" href="https://michealxie.github.io">
   <title>谢尹的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="a{     text-decoration: none;     color: white;   }   ul{     padding:0;     margin: 0;   }   li{     list-style: none;   }   div.carousel{     position: relative;     width: 640px">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="谢尹的博客">
-<meta property="og:url" content="https://michealxie.github.io/2017/11/30/carousel/index.html">
+<meta property="og:url" content="https://michealxie.github.io/page/2/index.html">
 <meta property="og:site_name" content="谢尹的博客">
-<meta property="og:description" content="a{     text-decoration: none;     color: white;   }   ul{     padding:0;     margin: 0;   }   li{     list-style: none;   }   div.carousel{     position: relative;     width: 640px">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg">
-<meta property="og:image" content="http://cdn.jirengu.com/book.jirengu.com/img/2.jpg">
-<meta property="og:image" content="http://cdn.jirengu.com/book.jirengu.com/img/3.jpg">
-<meta property="og:image" content="http://cdn.jirengu.com/book.jirengu.com/img/4.jpg">
-<meta property="og:image" content="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg">
-<meta property="og:image" content="http://cdn.jirengu.com/book.jirengu.com/img/2.jpg">
-<meta property="og:image" content="http://cdn.jirengu.com/book.jirengu.com/img/3.jpg">
-<meta property="og:image" content="http://cdn.jirengu.com/book.jirengu.com/img/4.jpg">
-<meta property="og:updated_time" content="2017-11-30T09:17:15.422Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="谢尹的博客">
-<meta name="twitter:description" content="a{     text-decoration: none;     color: white;   }   ul{     padding:0;     margin: 0;   }   li{     list-style: none;   }   div.carousel{     position: relative;     width: 640px">
-<meta name="twitter:image" content="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="谢尹的博客" type="application/atom+xml">
   
@@ -163,252 +150,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-carousel" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-10分钟解决跨域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/15/10分钟解决跨域/">10分钟解决跨域</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/15/10分钟解决跨域/" class="archive-article-date">
+  	<time datetime="2017-10-15T01:53:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-15</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-  <style>
-  a{
-    text-decoration: none;
-    color: white;
-  }
-  ul{
-    padding:0;
-    margin: 0;
-  }
-  li{
-    list-style: none;
-  }
-  div.carousel{
-    position: relative;
-    width: 640px;
-    height: 360px;
-    overflow: hidden;
-    margin: 20px auto;
-    border-radius: 6px;
-  }
-  div.carousel ul.images{
-    position: absolute;
-  }
-  div.carousel ul.images:after{
-    content: "";
-    clear: both;
-    display: block;
-  }
-  div.carousel li{
-    display: inline-block;
-    float:left;
-    width: 640px;
-  }
-  div.carousel li img{
-    width: 640px;
-    height: 360px;
-  }
-  div.carousel div.text{
-    /*display:none;*/
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding-left: 250px;
-    height: 40px;
-    /*background-color: rgba(255, 255, 255, 0.3);*/
-    line-height: 40px;
-    font-size: 2rem;
-  }
-  a.arrow{
-    display: inline-block;
-    position:absolute;
-    top: 50%;
-    margin-top: -15px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid white;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 30px;
-    color:white;
-  }
-  a.next{
-    right: 10px;
-  }
-  a.prev{
-    left: 10px;
-  }
-  ul.bullets{
-    position: absolute;
-    bottom: 10px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-  }
-  ul.bullets li{
-    width: 35px;
-    height: 7px;
-    border-radius: 4px;
-    border:1px solid white;
-    margin-left: 3px;
-  }
-  ul.bullets li.active{
-    background-color: white;
-  }
-  </style>
-  <title>Document</title>
-</head>
-<body>
-  <div class="carousel">
-    <ul class="images">
-      <li><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" alt=""><div class="text">学习 HTML</div></a></li>
-      <li><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/2.jpg" alt=""><div class="text"> 学习 CSS</div></a></li>
-      <li><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/3.jpg" alt=""><div class="text">学习 JS</div></a></li>
-      <li><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/4.jpg" alt=""><div class="text"> 学习 Vue</div></a></li>
-    </ul>
-    <a href="#" class="prev arrow"><</a>
-    <a href="#" class="next arrow">></a>
-      <ul class="bullets">
-        <li class="active"></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-  </div>
-  <div class="carousel">
-    <ul class="images">
-      <li><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/1.jpg" alt=""></a></li>
-      <li><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/2.jpg" alt=""></a></li>
-      <li><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/3.jpg" alt=""></a></li>
-      <li><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/4.jpg" alt=""></a></li>
-    </ul>
-    <a href="#" class="prev arrow"><</a>
-    <a href="#" class="next arrow">></a>
-      <ul class="bullets">
-        <li class="active"></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-  </div>
-</body>
-<script>
-
-
-function Carousel($node){
-  this.init($node)
-  this.bind()
-}
-
-Carousel.prototype = {
-  constructor: Carousel,
-  init:function($node){
-    this.$node = $node
-    this.$imgCt = $node.find($("ul.images"))
-    this.$imgs = $node.find($("ul.images li"))
-    this.$prev = $node.find($("a.prev"))
-    this.$next = $node.find($("a.next"))
-    this.$index = 0
-    //克隆图片
-    this.$imgCt.append(this.$imgs.first().clone())
-    this.$imgCt.prepend(this.$imgs.last().clone())
-    this.$imgNum = this.$imgs.length + 2
-    this.$imgWidth = this.$imgs.width()
-    this.$imgCt.css({
-      width: this.$imgNum * this.$imgWidth,
-      left: "-640px"
-    })
-    this.$bullets = $node.find($("ul.bullets li"))
-  //   setInifite()
-  // function setInifite(){
-  //   console.log(this)
-  // }
-  },
-  bind: function(){
-    var _this = this
-    this.$next.on("click",function(){
-      _this.playNext(1)
-    })
-    this.$prev.on("click",function(){
-      _this.playPrev(1)
-    })
-  },
-  playNext(num){
-    var _this = this
-    this.$imgCt.animate({left: "-=640"},function(){
-      _this.$index += num
-      if(_this.$index > _this.$imgs.length -1){
-        _this.$imgCt.css('left', -_this.$imgWidth)
-        _this.$index = 0
-      }
-      _this.setBullet()
-    })
-  },
-  playPrev(num){
-    var _this = this
-    this.$imgCt.animate({left: "+=640"},function(){
-      _this.$index -= num
-      if(_this.$index < 0){
-        _this.$imgCt.css('left', -_this.$imgWidth* _this.$imgs.length)
-        _this.$index = _this.$imgs.length - 1
-      }
-      _this.setBullet()
-    })
-  },
-  setBullet(){
-    this.$bullets.eq(this.$index).addClass("active")
-    .siblings().removeClass("active")
-  }
-}
-
-var a = new Carousel($("div.carousel").eq(0))
-var b = new Carousel($("div.carousel").eq(1))
-
-  // $.ajax({
-  //   url:"http://www.easy-mock.com/mock/59bf83f7e0dc663341ae4d33/example/images",
-  //   success:function(data){
-  //     console.log(data)
-  //     for(index in data.images){
-  //       $("div.carousel ul.images").append("<li><a href='#'><img src='' alt=''></a></li>")
-  //       var $li = $("div.carousel ul img").last()
-  //       $li.attr("src",data.images[index])
-  //       $("")
-  //     }
-  //   }
-  // })
-
-
-</script>
-</html>
-
+        <p> jsonp 与 CORS 两种跨域方案</p>
+        
+          <a class="article-more-a" href="/2017/10/15/10分钟解决跨域/#more">more >></a>
+        
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -417,84 +186,16 @@ var b = new Carousel($("div.carousel").eq(1))
       
 
       
-
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/15/10分钟解决跨域/">展开全文 >></a>
+        </p>
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://michealxie.github.io/2017/11/30/carousel/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/12/01/理解async函数/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          理解async函数
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/11/30/理解PWA/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">理解PWA</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -514,14 +215,12 @@ var b = new Carousel($("div.carousel").eq(1))
 
 
 
-  
-  
-  
 
   
-
   
-
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -544,8 +243,8 @@ var b = new Carousel($("div.carousel").eq(1))
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
