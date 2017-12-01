@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://michealxie.github.io">
-  <title>Archives: 2017/11 | 谢尹的博客</title>
+  <title>迭代器与生成器 | 谢尹的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="谢尹的博客">
-<meta property="og:url" content="https://michealxie.github.io/archives/2017/11/index.html">
+  <meta name="description" content="引言也许你写过这样的代码: 1234var colors = [&amp;quot;red&amp;quot;,&amp;quot;blue&amp;quot;,&amp;quot;green&amp;quot;]for(var i = 0, len = colors.length;i&amp;lt;len;i++)&amp;#123;  console.log(colors[i])&amp;#125; 最标准的 for 循环不是吗?这样写起来, 总会遇到问题: 当循">
+<meta property="og:type" content="article">
+<meta property="og:title" content="迭代器与生成器">
+<meta property="og:url" content="https://michealxie.github.io/2017/11/29/迭代器与生成器/index.html">
 <meta property="og:site_name" content="谢尹的博客">
+<meta property="og:description" content="引言也许你写过这样的代码: 1234var colors = [&amp;quot;red&amp;quot;,&amp;quot;blue&amp;quot;,&amp;quot;green&amp;quot;]for(var i = 0, len = colors.length;i&amp;lt;len;i++)&amp;#123;  console.log(colors[i])&amp;#125; 最标准的 for 循环不是吗?这样写起来, 总会遇到问题: 当循">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-29T02:45:10.225Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="谢尹的博客">
+<meta name="twitter:title" content="迭代器与生成器">
+<meta name="twitter:description" content="引言也许你写过这样的代码: 1234var colors = [&amp;quot;red&amp;quot;,&amp;quot;blue&amp;quot;,&amp;quot;green&amp;quot;]for(var i = 0, len = colors.length;i&amp;lt;len;i++)&amp;#123;  console.log(colors[i])&amp;#125; 最标准的 for 循环不是吗?这样写起来, 总会遇到问题: 当循">
   
     <link rel="alternative" href="/atom.xml" title="谢尹的博客" type="application/atom+xml">
   
@@ -150,259 +154,172 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-迭代器与生成器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/30/carousel/" class="archive-article-date">
-  	<time datetime="2017-11-30T09:17:15.422Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-30</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/30/理解PWA/" class="archive-article-date">
-  	<time datetime="2017-11-30T03:13:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/30/理解PWA/">理解PWA</a>
+    <h1 class="article-title" itemprop="name">
+      迭代器与生成器
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/29/使用洗牌算法实现数组打乱/" class="archive-article-date">
-  	<time datetime="2017-11-29T11:16:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/29/使用洗牌算法实现数组打乱/">使用洗牌算法实现数组打乱</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/29/迭代器与生成器/" class="archive-article-date">
+        
+        <a href="/2017/11/29/迭代器与生成器/" class="archive-article-date">
   	<time datetime="2017-11-29T01:05:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/29/迭代器与生成器/">迭代器与生成器</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>也许你写过这样的代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var colors = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;]</div><div class="line">for(var i = 0, len = colors.length;i&lt;len;i++)&#123;</div><div class="line">  console.log(colors[i])</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>最标准的 for 循环不是吗?<br><br>这样写起来, 总会遇到问题: 当循环嵌套时很容易误用各个循环的变量(i,j,k傻傻分不清)</p>
+<p>而 ES6 给了我们一个答案: 迭代器, 可以消除多个循环嵌套时的复杂性</p>
+<h1 id="什么是迭代器"><a href="#什么是迭代器" class="headerlink" title="什么是迭代器?"></a>什么是迭代器?</h1><p>迭代器是一个特殊对象, 这个对象上有一些专门为迭代过程设计的接口, 并且每个迭代器都有一个 next() 方法, 每次调用 next() 方法都会返回 一个对象, 表示下一次要返回的值, 对象上有两个属性, 一个是 value, 表示下一个要返回的值, 另一个属性是 done, 是一个布尔值, 表示接下来还有无值 要返回</p>
+<h1 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function* generator()&#123;</div><div class="line">  yield 1</div><div class="line">  yield 2</div><div class="line">  yield 3</div><div class="line">&#125;</div><div class="line">let gen = generator()</div><div class="line">gen.next() //1</div><div class="line">gen.next() //2</div><div class="line">gen.next() //3</div></pre></td></tr></table></figure>
+<p>上面就是一个生成器的实例, 声明</p>
+<h2 id="自执行函数-生成器"><a href="#自执行函数-生成器" class="headerlink" title="自执行函数 + 生成器"></a>自执行函数 + 生成器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function run(task)&#123;</div><div class="line">  let gen = task()</div><div class="line">  let result = gen.next()</div><div class="line"></div><div class="line">  function step()&#123;</div><div class="line">    if(!result.done)&#123;</div><div class="line">      if(typeof result.value === &quot;function&quot;)&#123;</div><div class="line">        result = </div><div class="line">      &#125;</div><div class="line">      result = gen.next(result.value)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  step()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://michealxie.github.io/2017/11/29/迭代器与生成器/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-test">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/28/testtt/" class="archive-article-date">
-  	<time datetime="2017-11-28T14:23:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2017/11/29/使用洗牌算法实现数组打乱/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          使用洗牌算法实现数组打乱
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/28/testtt/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">testtt</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/28/testtt/">testtt</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/28/来自未来的布局-Grid/" class="archive-article-date">
-  	<time datetime="2017-11-28T13:50:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/28/来自未来的布局-Grid/">来自未来的布局-Grid</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/28/fetch-前后端交互的未来/" class="archive-article-date">
-  	<time datetime="2017-11-28T13:49:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/28/fetch-前后端交互的未来/">fetch-前后端交互的未来</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/28/promise任务队列与event-loop/" class="archive-article-date">
-  	<time datetime="2017-11-28T13:48:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/28/promise任务队列与event-loop/">promise任务队列与event-loop</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/28/promise原理解析/" class="archive-article-date">
-  	<time datetime="2017-11-28T13:15:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/28/promise原理解析/">promise原理解析</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -425,8 +342,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

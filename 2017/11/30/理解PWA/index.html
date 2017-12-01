@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://michealxie.github.io">
-  <title>Archives: 2017/11 | 谢尹的博客</title>
+  <title>理解PWA | 谢尹的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="谢尹的博客">
-<meta property="og:url" content="https://michealxie.github.io/archives/2017/11/index.html">
+  <meta name="description" content="构成 PWA 的要素:  APP SHELL, 即 web app 的壳, 壳上带有web 加载到本地后的所有核心组件, 如关键组件的 js 文件, html 文件, 某些图片等   数据储存   localStorage —只能存储字符串, 取出与存放均需要使用 JSON方法, 优点是无期限储存, 而且使用简单…只需要一句 localStorage.name = JSON.stringify(x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理解PWA">
+<meta property="og:url" content="https://michealxie.github.io/2017/11/30/理解PWA/index.html">
 <meta property="og:site_name" content="谢尹的博客">
+<meta property="og:description" content="构成 PWA 的要素:  APP SHELL, 即 web app 的壳, 壳上带有web 加载到本地后的所有核心组件, 如关键组件的 js 文件, html 文件, 某些图片等   数据储存   localStorage —只能存储字符串, 取出与存放均需要使用 JSON方法, 优点是无期限储存, 而且使用简单…只需要一句 localStorage.name = JSON.stringify(x">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/img/156b5e3cc8373d55.png">
+<meta property="og:updated_time" content="2017-11-30T11:26:03.483Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="谢尹的博客">
+<meta name="twitter:title" content="理解PWA">
+<meta name="twitter:description" content="构成 PWA 的要素:  APP SHELL, 即 web app 的壳, 壳上带有web 加载到本地后的所有核心组件, 如关键组件的 js 文件, html 文件, 某些图片等   数据储存   localStorage —只能存储字符串, 取出与存放均需要使用 JSON方法, 优点是无期限储存, 而且使用简单…只需要一句 localStorage.name = JSON.stringify(x">
+<meta name="twitter:image" content="https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/img/156b5e3cc8373d55.png">
   
     <link rel="alternative" href="/atom.xml" title="谢尹的博客" type="application/atom+xml">
   
@@ -150,259 +156,184 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-理解PWA" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      理解PWA
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/30/carousel/" class="archive-article-date">
-  	<time datetime="2017-11-30T09:17:15.422Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-30</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/30/理解PWA/" class="archive-article-date">
+        
+        <a href="/2017/11/30/理解PWA/" class="archive-article-date">
   	<time datetime="2017-11-30T03:13:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-30</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/30/理解PWA/">理解PWA</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>构成 PWA 的要素:</p>
+<ol>
+<li>APP SHELL, 即 web app 的壳, 壳上带有web 加载到本地后的所有核心组件, 如关键组件的 js 文件, html 文件, 某些图片等<br><img src="https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/img/156b5e3cc8373d55.png" alt="图片"></li>
+</ol>
+<ol>
+<li>数据储存  <ul>
+<li>localStorage —只能存储字符串, 取出与存放均需要使用 JSON方法, 优点是无期限储存, 而且使用简单…只需要一句 localStorage.name = JSON.stringify(xxxx)</li>
+<li>indexedDB  —优秀的浏览器内置数据库, PWA 应用首选<ul>
+<li>非关系型 DB</li>
+<li>不像 SQL, 但使用 CRUD 语句</li>
+<li>可以存储js 对象, 数组, 各种各样的数据</li>
+<li>使用索引( index)来搜索数据</li>
+<li>相比 localStorage , 一般用来储存大量结构化的数据</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="indexedDB使用方法"><a href="#indexedDB使用方法" class="headerlink" title="indexedDB使用方法"></a>indexedDB使用方法</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB" target="_blank" rel="external">MDN</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">//1. 打开 indexedDB, 请求数据库</div><div class="line">var db,</div><div class="line">    request = indexedDB.open(&quot;数据库名字&quot;, &quot;版本&quot;)</div><div class="line"></div><div class="line">//2. 设置回调函数</div><div class="line">request.onsuccess = function(event)&#123;</div><div class="line">  alert(&quot;indexedDB!!!&quot;)</div><div class="line">&#125;</div><div class="line">request.onerror = function(event)&#123;</div><div class="line">  alert(&quot;为什么我没有 indexedDB&quot;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">//3. 创建数据库, onupgradeneeded 是我们唯一可以修改数据库结构的方法</div><div class="line">request.onupgradeneeded = function(event) &#123;</div><div class="line">  var db = event.target.result;</div><div class="line">  var objectStore = db.createObjectStore(&quot;customers&quot;, &#123; keyPath: &quot;ssn&quot; &#125;);</div><div class="line">  //设置 schema 也就是数据库结构</div><div class="line">  objectStore.createIndex(&quot;name&quot;, &quot;name&quot;, &#123; unique: false &#125;);</div><div class="line">  objectStore.createIndex(&quot;email&quot;, &quot;email&quot;, &#123; unique: true &#125;);</div><div class="line">  //往数据库里加数据</div><div class="line">  for (var i in customerData) &#123;</div><div class="line">    objectStore.add(customerData[i]);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">//4. 添加数据</div><div class="line">跟添加初始数据一样的操作</div><div class="line">for (var i in customerData) &#123;</div><div class="line">  objectStore.add(customerData[i]);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="3-创建一个-Service-Worker"><a href="#3-创建一个-Service-Worker" class="headerlink" title="3. 创建一个 Service Worker"></a>3. 创建一个 Service Worker</h2><p>service worker.js 里设置什么文件要被缓存, 对网络请求页面切换进行拦截</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://michealxie.github.io/2017/11/30/理解PWA/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/29/使用洗牌算法实现数组打乱/" class="archive-article-date">
-  	<time datetime="2017-11-29T11:16:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2017/11/30/carousel/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/29/使用洗牌算法实现数组打乱/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用洗牌算法实现数组打乱</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/29/使用洗牌算法实现数组打乱/">使用洗牌算法实现数组打乱</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/29/迭代器与生成器/" class="archive-article-date">
-  	<time datetime="2017-11-29T01:05:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/29/迭代器与生成器/">迭代器与生成器</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-test">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/28/testtt/" class="archive-article-date">
-  	<time datetime="2017-11-28T14:23:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/28/testtt/">testtt</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/28/来自未来的布局-Grid/" class="archive-article-date">
-  	<time datetime="2017-11-28T13:50:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/28/来自未来的布局-Grid/">来自未来的布局-Grid</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/28/fetch-前后端交互的未来/" class="archive-article-date">
-  	<time datetime="2017-11-28T13:49:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/28/fetch-前后端交互的未来/">fetch-前后端交互的未来</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/28/promise任务队列与event-loop/" class="archive-article-date">
-  	<time datetime="2017-11-28T13:48:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/28/promise任务队列与event-loop/">promise任务队列与event-loop</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/28/promise原理解析/" class="archive-article-date">
-  	<time datetime="2017-11-28T13:15:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/28/promise原理解析/">promise原理解析</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -425,8 +356,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
